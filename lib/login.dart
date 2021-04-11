@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sprint0/entrar.dart';
+import 'package:sprint0/register.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -68,7 +69,18 @@ class _LoginPageState extends State<LoginPage> {
                   }
                 },
                 child: Text('Entrar'),
-              ))
+              )),
+              Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: TextButton(
+                child: Text('Register'),
+                onPressed: (){
+                  Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => RegisterPage()),
+                        );
+                },
+              ),
+              )
         ],
       ),
     );
